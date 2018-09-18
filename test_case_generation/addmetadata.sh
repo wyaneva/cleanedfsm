@@ -23,3 +23,6 @@ do
         runtime=$( echo "$end-$start1" | bc -l)
         echo "time $runtime seconds"
 done
+
+rm -r "$OUTPUT_DIRECTORY/prefix_list"
+rm -r "$OUTPUT_DIRECTORY/transition_pairs"
