@@ -4,4 +4,4 @@ prefix_list/
 transition_pair_tests/
 transition_pairs/
 maxlengths/
-analysis/summary-analysis/fsm-summary.csv
+analysis/summary-analysis/data
