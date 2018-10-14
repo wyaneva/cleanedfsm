@@ -1,7 +1,3 @@
-# import plotly.plotly as py
-# import plotly.graph_objs as go
-# import plotly.figure_factory as FF
-
 import math,os,sys
 import numpy as np
 import pandas as pd
@@ -15,10 +11,17 @@ mplt.rcParams['ps.useafm'] = True
 mplt.rcParams['pdf.use14corefonts'] = True
 mplt.rcParams['text.usetex'] = True
 
-neededfiles = []
 names = ['padded','padded-transposed','with-offsets']
 mplt.rc('xtick', labelsize=30) 
 mplt.rc('ytick', labelsize=30) 
+
+option = sys.argv[2]
+neededfiles = []
+if(option == "keysight"):
+    pos = 0
+
+if(option == "network"):
+    pos = 1
 
 #maxpadded = []
 #offset = []
@@ -43,9 +46,9 @@ for filename in neededfiles:
     df3 = pd.read_csv(basefolder+'unsorted/'+'with-offsets/'+filename+'.csv')
   
     
-    cpuchar1 = (df1['Total CPU'].values.tolist()[1])
-    cpumaxpadded = (df2['Total CPU'].values.tolist()[1])
-    cpuoffset = (df3['Total CPU'].values.tolist()[1])
+    cpuchar1 = (df1['Total CPU'].values.tolist()[pos])
+    cpumaxpadded = (df2['Total CPU'].values.tolist()[pos])
+    cpuoffset = (df3['Total CPU'].values.tolist()[pos])
     #cpuchar4 = (df4['Total CPU'].values.tolist()[3])
     gpuchar1 = (df1['Execution GPU'].drop_duplicates().values.tolist()[0])   
     gpumaxpadded = (df2['Execution GPU'].drop_duplicates().values.tolist()[0])   
@@ -60,8 +63,6 @@ for filename in neededfiles:
     bmk = filename.split('.')[0]
     bmk = bmk.split('-')[0]
     bmklist.append(bmk)
-    print(bmk,gpuchar1,gpuoffset)
-   
 zipped=zip(bmklist,maxpaddednosort,char1nosort,offsetnosort)    
 zippedsorted=sorted(zipped, key=lambda x: x[2])    
 
@@ -72,19 +73,23 @@ fig,ax = plt.subplots()
 ind = np.arange(N)
 width=0.25
 
-
+print(char1nosort)
+   
 p1 = ax.bar(ind,maxpaddednosort, width, color='#009292')
 p2 = ax.bar(ind+width,char1nosort, width, color='#490092')
 p3 = ax.bar(ind+2*width,offsetnosort, width, color='#888888',hatch='//')
 
-ax.set_yticks(np.arange(1,9,step=1))
+ax.set_yticks(np.arange(1,5,step=1))
+
 
 ax.set_xticks(ind + width)
-ax.set_xticklabels(bmklist,rotation=28,fontsize=28)
-ax.legend((p1[0], p2[0],p3[0]), (names),fontsize=35)
+ax.set_xticklabels(bmklist,rotation=28,fontsize=35)
 ax.axhline(y=1,color='k',ls='dotted')
 
-plt.ylabel("Speed up compared to 16-core CPU",fontsize=35)
+if(option == "network"):
+    ax.legend((p1[0], p2[0],p3[0]), (names),fontsize=40)
+    plt.ylabel("Speedup compared to 16-core CPU",fontsize=40)
+
 plt.show()
 plt.close()
 

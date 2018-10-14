@@ -1,0 +1,13 @@
+benchmark, states, transitions
+tsp.fsm,24,5123
+aim.fsm,36,5331
+yahoo.fsm,51,10639
+h323.fsm,42,9618
+dns.fsm,193,40694
+ssl.fsm,31,6588
+ntp.fsm,26,5938
+rtp.fsm,25,6074
+counterstrike-source.fsm,27,5823
+hotline.fsm,30,5070
+halflife2-deathmatch.fsm,21,4305
+battlefield2.fsm,60,8640

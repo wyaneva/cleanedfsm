@@ -1,6 +1,3 @@
-# import plotly.plotly as py
-# import plotly.graph_objs as go
-# import plotly.figure_factory as FF
 import sys,os
 import math
 import numpy as np
@@ -27,36 +24,31 @@ fig, ax = plt.subplots()
 ax.set_xscale('log', basex=2,subsx=(2,3,4,5,6,7,8,9,10))  
 
 path = sys.argv[1]
-path2 = sys.argv[2] #path to the cpuminimumsorted folder
+option = sys.argv[2]
 
 for folder, sub_folders, files in os.walk(path):
     for special_file in files:
         file_path = os.path.join(folder, special_file)
-        bmk = special_file.split('.')[0]
-        bmk = bmk.split('-')[0]
-        
         df = pd.read_csv(file_path)
-        df2 = pd.read_csv(path2+bmk+".csv")
-        
         testcases=(df['Testcases'].drop_duplicates().values.tolist())
-        totalcpu = (df2['Total CPU'].values.tolist())
-
+        totalcpu = (df['Total CPU'].values.tolist())
+        cores = (df['Cores'].values.tolist())
   
         totalcpu32=[]
         totalcpu16=[]
         totalcpu8=[]
         totalcpu1=[]
-       
-        
+        bmk = special_file.split('.')[0]
+        bmk = bmk.split('-')[0]
         
         for i in range(0,len(totalcpu)):
-            if(i%4==0):
+            if(cores[i]==32):
                 totalcpu32.append(totalcpu[i])
-            if(i%4==1): 
+            if(cores[i]==16):
                 totalcpu16.append(totalcpu[i])
-            if(i%4==2):
+            if(cores[i]==8):
                 totalcpu8.append(totalcpu[i])
-            if(i%4==3):
+            if(cores[i]==1):
                 totalcpu1.append(totalcpu[i])
 
         myindices = []
@@ -65,14 +57,17 @@ for folder, sub_folders, files in os.walk(path):
         totalgpupre = (df['Total GPU'].values.tolist())
         
         for i in range(0,len(executiongpupre)):
-            if i%4 == 0:
+            if(cores[i]==16):
                 myindices.append(i)
 
         executiongpu  = [ executiongpupre[i] for i in myindices ]  
         totalgpu  = [ totalgpupre[i] for i in myindices ]       
-        print(len(totalcpu1),len(executiongpu))
+        print(len(executiongpu), bmk)
         for i in range(0,len(executiongpu)):
             executiongpu[i] = totalcpu16[i]/executiongpu[i]
+            if(testcases[i] == 36027 ):
+                ycord = executiongpu[i]
+
         print(executiongpu[0],bmk)    
         total+=executiongpu[0]
         
@@ -85,13 +80,17 @@ for folder, sub_folders, files in os.walk(path):
 
 print(total/12)
 
+if(option == "keysight"):
+    ycord = round(ycord,2)
+    ax.annotate("(36027, "+ str(ycord) + ")" , xy=(36027,ycord), textcoords='data',fontsize=30,arrowprops=dict(facecolor='black', shrink=0.05)) 
+
 #plt.ticklabel_format(style = 'plain',labelsize=20)
-plt.ylabel('Speed up compared to 16-core CPU',fontsize=35)
-plt.xlabel('Number of tests (log base 2)',fontsize=35)
+plt.ylabel('Speedup compared to 16-core CPU',fontsize=40)
+plt.xlabel('Number of tests (log base 2)',fontsize=40)
 #plt.xticks([np])    #sort the labels/handles by the sorting points
 sortingpoints, labels, handles = zip(*sorted(zip(sortingpoints, labels, handles), key=lambda t: t[0], reverse=True))
     #set the legend
-plt.legend(loc = 2, fontsize = 25, labels=labels, handles=handles,fancybox=True, framealpha=0.2)
+plt.legend(loc = 2, fontsize = 30, labels=labels, handles=handles,fancybox=True, framealpha=0.2)
 #plt.title(bmk,fontsize=15)
 #manager = plt.get_current_fig_manager()
 #manager.resize(*manager.window.maxsize())
