@@ -7,7 +7,6 @@ import numpy as np
 import pandas as pd
 import matplotlib as mplt
 import itertools
-#import matplotlib
 import matplotlib.pyplot as plt 
 from matplotlib import rcParams
 
@@ -16,7 +15,6 @@ rcParams['pdf.use14corefonts'] = True
 rcParams['text.usetex'] = True
 
 rcParams.update({'figure.autolayout': True})
-#matplotlib.tightlayout()
 
 fsmfile = sys.argv[1] # the csv file which contains the test case analysis for the FSMs
 
@@ -25,6 +23,7 @@ mplt.rc('xtick', labelsize=40)
 mplt.rc('ytick', labelsize=40) 
 
 fsm = (df['FSM'].drop_duplicates().values.tolist())
+num_fsm = len(fsm)
 for i in range(0,len(fsm)):
     filename = fsm[i]
     fsm[i]=fsm[i].split('-')[0]
@@ -40,11 +39,30 @@ zippedsorted = sorted(zipped,key=lambda x: x[1])
 fsm,avgall,stderr=zip(*zippedsorted)
 
 fig,ax=plt.subplots()
-ax.set_xticklabels(fsm,rotation=30,fontsize=30)
+# remove plot frame lines
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
+
+# set x axis and y axis
+#plt.ylim(0, 30, 5)
+
+# set x ticks and y ticks
+yrange = list(range(0,30,5))
+yrange.remove(0)
+plt.yticks(yrange)
+ax.set_xticklabels(fsm,rotation=40,fontsize=40)
+
+# remove the tick marks
+plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# set background lines
+for y in yrange:
+    plt.plot(range(0, num_fsm), [y]*len(range(0, num_fsm)), "--", lw=0.5, color="black", alpha=0.3)
+
 plt.ylabel("Average Test Length",fontsize=40)
-plt.errorbar(fsm, avgall, stderr, linestyle='None', marker='^', capsize=10,markersize=25) 
-#plt.tight_layout()
+plt.errorbar(fsm, avgall, stderr, linestyle='None', marker='^', capsize=10,markersize=20) 
 
 plt.show()
 plt.close()
-
