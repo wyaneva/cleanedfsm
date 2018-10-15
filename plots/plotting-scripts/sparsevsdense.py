@@ -9,6 +9,8 @@ from matplotlib import rcParams
 mplt.rcParams['ps.useafm'] = True
 mplt.rcParams['pdf.use14corefonts'] = True
 mplt.rcParams['text.usetex'] = True
+mplt.rc('xtick', labelsize=40) 
+mplt.rc('ytick', labelsize=40) 
 
 rcParams.update({'figure.autolayout': True})
 
@@ -100,5 +102,9 @@ ax.axhline(y=1, color='k', ls='dotted')
 if option == "network":
     plt.ylabel("Speedup compared to 16-core CPU",fontsize=40)
     ax.legend((p1[0], p2[0]), ('Sparse','Dense'),fontsize=40, loc=2)
+
+#fig = plt.gcf()
+#fig.set_size_inches(10,30)
+#fig.savefig("fig.pdf", bbox_inches='tight',dpi=100);
 
 plt.show()

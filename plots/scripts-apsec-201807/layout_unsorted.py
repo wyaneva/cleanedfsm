@@ -12,8 +12,8 @@ from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
 neededfiles = ['aim.test','battlefield2.test','counterstrike-source.test','dns.test','h323.test','halflife2-deathmatch.test','hotline.test','ntp.test','rtp.test','ssl.test','tsp.test','yahoo.test']
 names = ['padded','padded-transposed','with-offsets']
-mplt.rc('xtick', labelsize=40) 
-mplt.rc('ytick', labelsize=40) 
+mplt.rc('xtick', labelsize=30) 
+mplt.rc('ytick', labelsize=30) 
 
 mplt.rcParams['ps.useafm'] = True
 mplt.rcParams['pdf.use14corefonts'] = True

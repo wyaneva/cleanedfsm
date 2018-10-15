@@ -135,10 +135,10 @@ ax.spines["right"].set_visible(False)
 ax.spines["left"].set_visible(False)
 
 # set x axis and y axis
-plt.ylim(0, 9, 1)
+plt.ylim(0, 13, 1)
 
 # set x ticks and y ticks
-yrange = list(range(0,9,1))
+yrange = list(range(0,13,1))
 yrange.remove(0)
 plt.yticks(yrange)
 ax.set_xticks(ind + width)
