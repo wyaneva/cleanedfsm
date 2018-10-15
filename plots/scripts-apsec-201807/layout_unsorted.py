@@ -93,19 +93,34 @@ p1 = ax.bar(ind,maxpaddednosort, width, color='#009292')
 p2 = ax.bar(ind+width,char1nosort, width, color='#490092')
 p3 = ax.bar(ind+2*width,offsetnosort, width, color='#888888',hatch='//')
 
-# p5 = ax.bar(ind+4*width,offsetnosort, width, color='m')
-# p6 = ax.bar(ind+5*width,char1nosort, width, color='c')
+# plot look and feel
+# remove plot frame lines
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
 
-#ax.set_title('Speed-up in Execution Time',fontsize=15)
-ax.set_yticks(np.arange(1,9,step=1))
+# set x axis and y axis
+plt.ylim(0, 9, 1)
 
+# set x ticks and y ticks
+yrange = list(range(0,9,1))
+yrange.remove(0)
+plt.yticks(yrange)
 ax.set_xticks(ind + width)
 ax.set_xticklabels(bmklist,rotation=28,fontsize=35)
-ax.legend((p1[0], p2[0],p3[0]), (names),fontsize=40)
-ax.axhline(y=1,color='k',ls='dotted')
 
+# remove the tick marks
+plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# set background lines
+for y in yrange:
+    ax.axhline(y=y,color='k',ls='dotted', alpha=0.1)
+ax.axhline(y=1, color='k', ls='dotted')
+
+# set labels
+ax.legend((p1[0], p2[0],p3[0]), (names),fontsize=40)
 plt.ylabel("Speed up compared to 16-core CPU",fontsize=40)
+
 plt.show()
 plt.close()
-
-

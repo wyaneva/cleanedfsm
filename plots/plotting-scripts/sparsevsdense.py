@@ -44,7 +44,7 @@ for filename in neededfiles:
         cpuchar1_16 = (df2['Total CPU'].values.tolist()[0])
     else:
         sparsecpuchar1_16 = (df1['Total CPU'].values.tolist()[1])
-        cpuchar1_16 = (df2['Total CPU'].values.tolist()[0])
+        cpuchar1_16 = (df2['Total CPU'].values.tolist()[1])
 
     sparsegpuchar1 = (df1['Execution GPU'].drop_duplicates().values.tolist()[0])   
     gpuchar1 = (df2['Execution GPU'].drop_duplicates().values.tolist()[0])   

@@ -79,18 +79,35 @@ p1 = ax.bar(ind,maxpaddednosort, width, color='#009292')
 p2 = ax.bar(ind+width,char1nosort, width, color='#490092')
 p3 = ax.bar(ind+2*width,offsetnosort, width, color='#888888',hatch='//')
 
-ax.set_yticks(np.arange(1,5,step=1))
+# plot look and feel
+# remove plot frame lines
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
 
+# set x axis and y axis
+plt.ylim(0, 5, 1)
 
+# set x ticks and y ticks
+yrange = list(range(0,5,1))
+yrange.remove(0)
+plt.yticks(yrange)
 ax.set_xticks(ind + width)
 ax.set_xticklabels(bmklist,rotation=28,fontsize=35)
-ax.axhline(y=1,color='k',ls='dotted')
 
+# remove the tick marks
+plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# set background lines
+for y in yrange:
+    ax.axhline(y=y,color='k',ls='dotted', alpha=0.1)
+ax.axhline(y=1, color='k', ls='dotted')
+
+# set labels
 if(option == "network"):
     ax.legend((p1[0], p2[0],p3[0]), (names),fontsize=40)
     plt.ylabel("Speedup compared to 16-core CPU",fontsize=40)
 
 plt.show()
 plt.close()
-
-
