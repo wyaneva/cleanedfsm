@@ -49,11 +49,11 @@ ax.spines["left"].set_visible(False)
 #plt.ylim(0, 30, 5)
 
 # set x ticks and y ticks
-yrange = list(range(0,30,5))
-yrange.remove(0)
-#yrange = list(range(400,1700,200))
+#yrange = list(range(0,30,5))
+#yrange.remove(0)
+yrange = list(range(400,1700,200))
 plt.yticks(yrange)
-ax.set_xticklabels(fsm,rotation=40,fontsize=40)
+ax.set_xticklabels(fsm,rotation=45,fontsize=50)
 
 # remove the tick marks
 plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
@@ -62,7 +62,7 @@ plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom=
 for y in yrange:
     plt.plot(range(0-1, num_fsm+1), [y]*len(range(0-1, num_fsm+1)), "--", lw=0.5, color="black", alpha=0.3)
 
-plt.ylabel("Average Test Length",fontsize=40)
+#plt.ylabel("Average Test Length",fontsize=50)
 plt.errorbar(fsm, avgall, stderr, linestyle='None', marker='^', capsize=10,markersize=20) 
 
 plt.show()

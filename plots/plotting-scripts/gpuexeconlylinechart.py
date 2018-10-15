@@ -20,11 +20,12 @@ total = 0
 handles = []
 labels = []
 sortingpoints = []
-fig, ax = plt.subplots()
-ax.set_xscale('log', basex=2,subsx=(2,3,4,5,6,7,8,9,10))  
 
 path = sys.argv[1]
 option = sys.argv[2]
+
+# setup plot
+fig, ax = plt.subplots()
 
 for folder, sub_folders, files in os.walk(path):
     for special_file in files:
@@ -80,34 +81,43 @@ for folder, sub_folders, files in os.walk(path):
 
 print(total/12)
 
+# annotate keysight
 if(option == "keysight"):
     ycord = round(ycord,2)
     ax.annotate("(36027, "+ str(ycord) + ")" , xy=(36027,ycord), textcoords='data',fontsize=30,arrowprops=dict(facecolor='black', shrink=0.05)) 
 
-#plt.ticklabel_format(style = 'plain',labelsize=20)
-plt.ylabel('Speedup compared to 16-core CPU',fontsize=40)
-plt.xlabel('Number of tests (log base 2)',fontsize=40)
-#plt.xticks([np])    #sort the labels/handles by the sorting points
+# remove plot frame lines
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
+
+# set x axis and y axis
+plt.ylim(0, 13, 1)
+ax.set_xscale('log', basex=2,subsx=(2,3,4,5,6,7,8,9,10))  
+
+# set x ticks and y ticks
+yrange = list(range(0,13,1))
+plt.yticks(yrange)
+
+# remove the tick marks
+plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# set background lines
+for y in yrange:
+    ax.axhline(y=y,color='k',ls='dotted', alpha=0.1)
+ax.axhline(y=1, color='k', ls='dotted')
+
+# set labels
+if(option == "keysight"):
+    plt.xlabel('Number of tests (log base 2)',fontsize=40)
+else:
+    plt.ylabel('Speedup compared to 16-core CPU',fontsize=40)
+    plt.xlabel('Number of tests (log base 2)',fontsize=40)
+
+#sort the labels/handles by the sorting points
 sortingpoints, labels, handles = zip(*sorted(zip(sortingpoints, labels, handles), key=lambda t: t[0], reverse=True))
     #set the legend
 plt.legend(loc = 2, fontsize = 30, labels=labels, handles=handles,fancybox=True, framealpha=0.2)
-#plt.title(bmk,fontsize=15)
-#manager = plt.get_current_fig_manager()
-#manager.resize(*manager.window.maxsize())
-#plt.savefig('./newsetofgraphs/'+'dense2char1'+'.pdf',bbox_inches='tight')
+
 plt.show()
-#plt.close()
-    #plt.show()    
-    # layout ={
-    #         'title':filename,
-    #         'yaxis': {
-    #         'title' : 'Testcases/second'
-    #         },
-    #         'xaxis': {
-    #         'title' : 'Log Number of Testcases'
-    #         },
-    #  }
-
-    # fig = dict(data=dataPanda,layout=layout)
-    # py.image.save_as(fig, './individualgraphs/'+filename+'2.png')
-
