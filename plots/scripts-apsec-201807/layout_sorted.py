@@ -139,15 +139,35 @@ p4 = ax.bar(ind,maxpaddedsort, width,bottom=maxpaddednosort, color='#009292',alp
 p5 = ax.bar(ind+width,char1sort, width,bottom=char1nosort, color='#490092',alpha=0.60)
 p6 = ax.bar(ind+2*width,offsetsort, width,bottom=offsetnosort, color='#888888',alpha=0.50,hatch='//')
 
-# p5 = ax.bar(ind+4
-# p5 = ax.bar(ind+4*width,offsetnosort, width, color='m')
-# p6 = ax.bar(ind+5*width,char1nosort, width, color='c')
+# plot look and feel
+# remove plot frame lines
+ax.spines["top"].set_visible(False)
+ax.spines["bottom"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.spines["left"].set_visible(False)
 
-#ax.set_title('Speed-up in Execution Time',fontsize=15)
+# set x axis and y axis
+plt.ylim(0, 13, 1)
 
+# set x ticks and y ticks
+yrange = list(range(0,13,1))
+yrange.remove(0)
+plt.yticks(yrange)
 ax.set_xticks(ind + width)
 ax.set_xticklabels(bmklist,rotation=28,fontsize=35)
 
+# remove the tick marks
+plt.tick_params(axis="both", which="both", bottom="off", top="off", labelbottom="on", left="off", right="off", labelleft="on")
+
+# set background lines
+for y in yrange:
+    ax.axhline(y=y,color='k',ls='dotted', alpha=0.1)
+ax.axhline(y=1, color='k', ls='dotted')
+
+# set labels
+plt.ylabel("Speed up compared to 16-core CPU",fontsize=40)
+
+# set legend
 legend1=plt.legend((p1[0], p4[0]), (names),title=names2[0],fontsize=40,loc=(0.02,0.70))
 legend2=plt.legend((p2[0], p5[0]), (names),title=names2[1],fontsize=40,loc=(0.25,0.70)) 
 legend3=plt.legend((p3[0],p6[0]), (names),fontsize=40,title=names2[2],loc=(0.49,0.70))
@@ -155,16 +175,10 @@ legend3=plt.legend((p3[0],p6[0]), (names),fontsize=40,title=names2[2],loc=(0.49,
 legend1.set_title(names2[0],prop={'size':35})
 legend2.set_title(names2[1],prop={'size':35})
 legend3.set_title(names2[2],prop={'size':35})
-ax.axhline(y=1,color='k',ls='dotted')
-ax.set_yticks(np.arange(1,13,step=1))
-
 
 plt.gca().add_artist(legend1)
 plt.gca().add_artist(legend2)
 plt.gca().add_artist(legend3)
 
-plt.ylabel("Speed up compared to 16-core CPU",fontsize=40)
 plt.show()
 plt.close()
-
-
