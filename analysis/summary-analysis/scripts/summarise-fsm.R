@@ -32,4 +32,4 @@ print.data.frame(table)
 
 # Save table for output
 table_out <- capture.output(print.data.frame(table))
-cat(table_out, file="../data/summarised-fsm.tsv", sep="\n")
+cat(table_out, file="../data/summarised-fsm.csv", sep="\n")

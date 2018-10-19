@@ -1,0 +1,267 @@
+Transitions
+pf$FSM
+ fsm118  fsm119  fsm121  fsm122  fsm123  fsm125  fsm127  fsm156   fsm19  fsm784 
+      4       4       4       4       4       4       4       4       4       4 
+ fsm732  fsm622  fsm717   fsm49  fsm137  fsm670  fsm679  fsm716  fsm804  fsm103 
+      6       9       9      11      12      12      12      12      12      13 
+ fsm160   fsm33    fsm8  fsm171  fsm172   fsm21  fsm658  fsm668  fsm714    fsm1 
+     13      13      13      14      14      14      14      14      14      15 
+  fsm17  fsm267   fsm32    fsm5  fsm591  fsm102   fsm16   fsm20  fsm767  fsm158 
+     15      15      15      15      16      17      17      17      17      18 
+ fsm178  fsm623  fsm597    fsm9   fsm18  fsm772  fsm136  fsm616  fsm737  fsm742 
+     18      18      19      19      20      20      21      21      22      22 
+ fsm777  fsm130  fsm689  fsm105  fsm703  fsm769  fsm771   fsm26  fsm112  fsm108 
+     22      24      24      25      25      25      25      26      27      28 
+ fsm199  fsm620  fsm785  fsm824  fsm825  fsm803  fsm107  fsm106  fsm708  fsm656 
+     28      28      28      28      28      29      30      31      31      33 
+ fsm664  fsm654   fsm65  fsm718  fsm197  fsm202  fsm203  fsm621  fsm688  fsm617 
+     33      34      36      37      38      38      38      38      38      42 
+ fsm761  fsm799    fsm2   fsm61  fsm724  fsm665  fsm266  fsm744    fsm3    fsm4 
+     42      43      45      45      46      47      53      53      56      56 
+ fsm788  fsm768  fsm593  fsm749  fsm499  fsm503  fsm511  fsm515  fsm519  fsm489 
+     57      64      94     100     103     103     103     103     103     104 
+ fsm493  fsm497  fsm509  fsm517  fsm680  fsm657  fsm153  fsm151  fsm612  fsm482 
+    104     104     104     104     122     130     150     152     155     157 
+ fsm485  fsm481  fsm753  fsm674  fsm614  fsm681  fsm671  fsm720  fsm635  fsm636 
+    157     158     189     192     210     216     221     224     238     238 
+ fsm643  fsm648  fsm628  fsm629  fsm653   fsm23  fsm631  fsm647  fsm762  fsm640 
+    238     238     239     239     239     240     240     240     240     242 
+ fsm642  fsm645  fsm652  fsm646  fsm649  fsm650  fsm651  fsm624  fsm692  fsm751 
+    242     242     242     243     243     243     243     276     279     291 
+ fsm738  fsm747  fsm729  fsm781  fsm754  fsm715  fsm786  fsm727  fsm626  fsm743 
+    305     305     315     321     333     334     403     404     405     430 
+ fsm627   fsm41  fsm752  fsm795  fsm796  fsm789  fsm790  fsm794  fsm791  fsm792 
+    435     512     519     523     523     528     528     528     533     533 
+ fsm818  fsm813  fsm755  fsm608  fsm719  fsm655  fsm672  fsm606  fsm595  fsm596 
+    571     622     634     650     682     740     763     787     792     792 
+ fsm618  fsm687  fsm694  fsm696  fsm697  fsm698  fsm701  fsm707  fsm721  fsm675 
+    792     792     792     792     792     792     792     792     792     902 
+ fsm783  fsm662  fsm759  fsm758  fsm666  fsm231  fsm779  fsm811  fsm802  fsm750 
+    930     944     962    1210    1267    1272    1295    1531    1580    1623 
+ fsm685  fsm805   fsm22  fsm598  fsm599  fsm233  fsm814  fsm821   fsm92   fsm12 
+   1640    1779    1849    2027    2027    2032    2037    2037    2039    2042 
+ fsm234  fsm114  fsm235   fsm60   fsm68  fsm764  fsm101  fsm763  fsm775  fsm602 
+   2042    2282    2282    2284    2284    2284    2286    2286    2364    2531 
+ fsm607  fsm800  fsm134   fsm25  fsm109  fsm110  fsm194  fsm135   fsm77   fsm95 
+   2532    2532    2534    2534    2535    2535    2535    2537    2540    2540 
+  fsm97   fsm98   fsm99   fsm81  fsm797   fsm47  fsm604  fsm157  fsm798  fsm676 
+   2540    2540    2540    2541    2547    2781    2783    2785    2794    2844 
+ fsm773  fsm601  fsm603  fsm143  fsm605   fsm74  fsm728   fsm13  fsm807  fsm815 
+   2934    3035    3035    3284    3287    3546    3579    3580    4056    4061 
+ fsm817  fsm709  fsm711  fsm684  fsm166  fsm162  fsm164  fsm163  fsm165  fsm819 
+   4316    4774    4828    4913    5324    5326    5326    5329    5330    5571 
+ fsm822  fsm690  fsm725  fsm756  fsm610  fsm673  fsm488  fsm490  fsm492  fsm498 
+   5579    5846    6091    6109    6343    6535    6841    6841    6841    6841 
+ fsm500  fsm502  fsm506  fsm508  fsm512  fsm514  fsm516   fsm90  fsm179  fsm152 
+   6841    6841    6841    6841    6841    6841    6841    6842    6876    6888 
+ fsm145  fsm483   fsm11  fsm741  fsm169  fsm168   fsm87  fsm710  fsm730  fsm201 
+   6895    6895    7413    7635    8109    8110    8610   10135   11335   12122 
+ fsm132  fsm133   fsm96   fsm44   fsm76   fsm78  fsm778  fsm713  fsm615  fsm170 
+  12407   12407   12659   12660   12660   12660   14703   19496   21983   25111 
+  fsm70  fsm100   fsm93   fsm46   fsm66   fsm39   fsm72   fsm73  fsm111  fsm486 
+  25311   25312   25312   25314   25316   25317   25317   25318   25339   25395 
+ fsm735  fsm736  fsm734  fsm733   fsm42  fsm147  fsm139  fsm263  fsm265  fsm116 
+  28506   28506   35878   47062   48079   50610   50617   63764   63766   64524 
+ fsm117   fsm45  fsm154  fsm174  fsm175  fsm176  fsm183  fsm185  fsm184  fsm186 
+  64524   64778   64784  101212  101212  101212  109303  109303  109304  109304 
+ fsm191  fsm192  fsm187  fsm190  fsm188   fsm15   fsm37   fsm38  fsm232  fsm261 
+ 109304  109304  109305  109305  109306  126510  126510  126510  128269  129578 
+ fsm757  fsm244  fsm770  fsm211  fsm213  fsm229  fsm227  fsm217  fsm226  fsm268 
+ 196116  205521  379565  506018  509562  509579  511092  521188  522213  546994 
+ fsm270  fsm373  fsm374  fsm375  fsm377  fsm378  fsm379  fsm380  fsm381  fsm382 
+ 546994  546994  546994  546994  546994  546994  546994  546994  546994  546994 
+ fsm384  fsm245  fsm246  fsm258  fsm205  fsm215  fsm230  fsm249  fsm250  fsm251 
+ 546994  788433  789703 1045985 1565649 1565649 1565649 1565649 1565649 1565649 
+ fsm214  fsm252  fsm240  fsm242  fsm222  fsm224  fsm247  fsm253  fsm257  fsm208 
+1565903 1565903 1566157 1566184 1566411 1566945 1567173 1567173 1567182 1567445 
+ fsm216  fsm254  fsm255  fsm221  fsm225  fsm228  fsm207  fsm219  fsm206  fsm239 
+1567445 1568443 1568443 1568960 1569713 1569713 1569740 1569740 1569749 1571763 
+ fsm248  fsm416  fsm271  fsm274  fsm278  fsm280  fsm281  fsm283  fsm284  fsm286 
+1575644 1640031 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm287  fsm289  fsm292  fsm294  fsm295  fsm296  fsm297  fsm298  fsm299  fsm300 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm301  fsm302  fsm303  fsm306  fsm310  fsm311  fsm312  fsm313  fsm320  fsm321 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm323  fsm325  fsm329  fsm330  fsm331  fsm332  fsm333  fsm334  fsm335  fsm336 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm339  fsm340  fsm348  fsm349  fsm350  fsm354  fsm356  fsm360  fsm366  fsm367 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm369  fsm387  fsm389  fsm392  fsm395  fsm397  fsm414  fsm418  fsm420  fsm421 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm422  fsm423  fsm424  fsm425  fsm428  fsm429  fsm430  fsm431  fsm432  fsm433 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm434  fsm435  fsm436  fsm437  fsm440  fsm441  fsm444  fsm445  fsm447  fsm448 
+1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 1643067 
+ fsm450  fsm452  fsm453  fsm454  fsm455  fsm478  fsm305  fsm470  fsm351  fsm386 
+1643067 1643067 1643067 1643067 1643067 1643067 1643321 1643575 1644092 1644863 
+ fsm388  fsm383  fsm385  fsm408  fsm346  fsm317  fsm353  fsm401  fsm405  fsm465 
+1644863 1645308 1645308 1645308 1647131 1648191 2193241 2193241 2193241 2193241 
+ fsm469  fsm291  fsm307  fsm308  fsm315  fsm326  fsm342  fsm343  fsm347  fsm357 
+2193241 2193750 2193750 2193750 2193750 2193750 2193750 2193750 2193750 2193750 
+ fsm359  fsm363  fsm364  fsm393  fsm396  fsm417  fsm426  fsm427  fsm438  fsm439 
+2193750 2193750 2193750 2193750 2193750 2193750 2193750 2193750 2193750 2193750 
+ fsm443  fsm446  fsm457  fsm458  fsm459  fsm460  fsm371  fsm415  fsm472  fsm475 
+2193750 2193750 2193750 2193750 2193750 2193750 2194266 2194266 2194266 2194266 
+ fsm477  fsm412  fsm293  fsm399  fsm461  fsm361  fsm355  fsm404  fsm318  fsm362 
+2194266 2194768 2195291 2195291 2195291 2195782 2196316 2196316 2196317 2198321 
+ fsm277  fsm220  fsm210  fsm365  fsm473  fsm328  fsm341  fsm402  fsm413  fsm466 
+2203981 2612405 2613405 2743416 2743416 2743671 2743671 2743671 2743671 2743671 
+ fsm468  fsm400  fsm462  fsm410  fsm479  fsm409  fsm463 
+2743671 2746490 2746490 3295895 3419055 3847094 3847094 
+
+States
+pf$FSM
+ data=d) +     fsm118     fsm119     fsm121     fsm122     fsm123     fsm125 
+         1          4          4          4          4          4          4 
+    fsm127     fsm156      fsm19     fsm784      fsm49     fsm718     fsm732 
+         4          4          4          4          5          6          6 
+    fsm755       fsm3       fsm4     fsm595     fsm596     fsm606     fsm618 
+         6          7          7          7          7          7          7 
+    fsm687     fsm694     fsm696     fsm697     fsm698     fsm701     fsm707 
+         7          7          7          7          7          7          7 
+    fsm721     fsm717     fsm622     fsm160     fsm670     fsm137     fsm158 
+         7          8          9         10         10         11         11 
+    fsm171     fsm172      fsm21     fsm267     fsm679     fsm716     fsm724 
+        11         11         11         11         11         11         11 
+      fsm8     fsm804     fsm103     fsm231      fsm33     fsm788     fsm157 
+        11         11         12         12         12         12         13 
+     fsm41     fsm714     fsm769     fsm805       fsm1     fsm114     fsm134 
+        13         13         13         13         14         14         14 
+     fsm17     fsm235      fsm25      fsm32       fsm5     fsm658     fsm668 
+        14         14         14         14         14         14         14 
+    fsm102     fsm109     fsm110      fsm18     fsm194     fsm744     fsm811 
+        15         15         15         15         15         15         15 
+     fsm16      fsm20     fsm233     fsm591      fsm60     fsm665      fsm68 
+        16         16         16         16         16         16         16 
+    fsm703     fsm767     fsm802     fsm135     fsm178     fsm623     fsm671 
+        16         16         16         17         17         17         17 
+    fsm720     fsm768       fsm9     fsm101      fsm47     fsm597     fsm620 
+        17         17         17         18         18         18         18 
+    fsm635     fsm636     fsm643     fsm648      fsm74     fsm754     fsm799 
+        18         18         18         18         18         18         18 
+    fsm824     fsm825     fsm143     fsm598     fsm599     fsm628     fsm629 
+        18         18         19         19         19         19         19 
+    fsm653     fsm715     fsm771     fsm772     fsm814     fsm821     fsm130 
+        19         19         19         19         19         19         20 
+    fsm136     fsm199     fsm616     fsm631     fsm647     fsm764      fsm77 
+        20         20         20         20         20         20         20 
+     fsm81      fsm95      fsm97      fsm98      fsm99     fsm105     fsm602 
+        20         20         20         20         20         21         21 
+    fsm777     fsm604     fsm640     fsm642     fsm645     fsm652     fsm689 
+        21         22         22         22         22         22         22 
+    fsm737     fsm742     fsm749     fsm763     fsm785     fsm800     fsm807 
+        22         22         22         22         22         22         22 
+    fsm112      fsm13     fsm234     fsm593     fsm601     fsm603     fsm646 
+        23         23         23         23         23         23         23 
+    fsm649     fsm650     fsm651      fsm92     fsm108      fsm12     fsm197 
+        23         23         23         23         24         24         24 
+     fsm26     fsm605     fsm664     fsm107     fsm624      fsm65     fsm106 
+        24         24         25         26         26         26         27 
+    fsm621     fsm692     fsm708     fsm797     fsm803     fsm815     fsm819 
+        27         27         27         27         27         27         27 
+    fsm612     fsm202     fsm203     fsm614     fsm626     fsm743     fsm817 
+        28         30         30         30         30         30         30 
+    fsm166     fsm674     fsm688     fsm654     fsm656     fsm751     fsm822 
+        32         32         32         33         33         33         33 
+    fsm162     fsm164     fsm753     fsm672     fsm729     fsm488     fsm490 
+        34         34         34         35         35         36         36 
+    fsm492     fsm498     fsm500     fsm502     fsm506     fsm508     fsm512 
+        36         36         36         36         36         36         36 
+    fsm514     fsm516     fsm163      fsm61     fsm761      fsm90     fsm165 
+        36         36         37         37         37         37         38 
+    fsm775     fsm752       fsm2     fsm655     fsm662     fsm617     fsm795 
+        38         39         40         40         41         42         42 
+    fsm796      fsm87     fsm169     fsm813     fsm168     fsm680     fsm781 
+        42         42         45         45         46         46         46 
+    fsm786     fsm762     fsm789     fsm790     fsm794     fsm627     fsm266 
+        47         48         48         48         48         49         50 
+    fsm608     fsm657     fsm719     fsm675     fsm738     fsm747     fsm791 
+        50         52         52         53         53         53         53 
+    fsm792                fsm710     fsm132     fsm133      fsm96      fsm44 
+        53         54         55         59         59         59         60 
+     fsm76      fsm78     fsm725     fsm610     fsm779     fsm681     fsm727 
+        60         60         61         62         63         66         67 
+    fsm201     fsm179     fsm759     fsm818      fsm11     fsm152     fsm673 
+        70         71         72         72         73         83         83 
+    fsm145     fsm483     fsm756     fsm499     fsm503     fsm511     fsm515 
+        91         91         91         93         93         93         93 
+    fsm519     fsm489     fsm493     fsm497     fsm509     fsm517     fsm666 
+        93         94         94         94         94         94         97 
+    fsm709     fsm615     fsm750      fsm22     fsm773     fsm728     fsm170 
+        99        102        103        105        106        109        111 
+     fsm70     fsm711     fsm100      fsm93      fsm46      fsm66      fsm39 
+       111        111        112        112        114        115        116 
+     fsm72      fsm73     fsm685     fsm111     fsm153     fsm151     fsm676 
+       116        117        130        134        142        143        144 
+    fsm690     fsm783     fsm482     fsm485     fsm481     fsm607     fsm486 
+       145        145        151        151        152        162        181 
+    fsm798      fsm42     fsm758     fsm147     fsm139      fsm23     fsm741 
+       184        199        202        210        216        238        259 
+    fsm116     fsm117      fsm45     fsm263     fsm154     fsm265     fsm730 
+       264        264        266        269        271        271        284 
+    fsm713     fsm684     fsm174     fsm175     fsm176     fsm183     fsm185 
+       308        311        412        412        412        439        439 
+    fsm184     fsm186     fsm191     fsm192     fsm187     fsm190     fsm188 
+       440        440        440        440        441        441        442 
+    fsm778      fsm15      fsm37      fsm38     fsm232     fsm261     fsm757 
+       503        510        510        510        532        544        786 
+    fsm244     fsm735     fsm736     fsm734     fsm733     fsm770     fsm211 
+       841        850        850       1047       1347       1561       2014 
+    fsm213     fsm227     fsm229     fsm217     fsm226     fsm268     fsm270 
+      2028       2038       2039       2064       2072       2166       2166 
+    fsm373     fsm374     fsm375     fsm377     fsm378     fsm379     fsm380 
+      2166       2166       2166       2166       2166       2166       2166 
+    fsm381     fsm382     fsm384     fsm245     fsm246     fsm258     fsm205 
+      2166       2166       2166       3145       3155       4167       6217 
+    fsm215     fsm230     fsm249     fsm250     fsm251     fsm214     fsm252 
+      6217       6217       6217       6217       6217       6219       6219 
+    fsm222     fsm240     fsm247     fsm253     fsm257     fsm208     fsm216 
+      6221       6221       6229       6229       6229       6231       6231 
+    fsm242     fsm254     fsm255     fsm224     fsm221     fsm206     fsm207 
+      6233       6237       6237       6238       6243       6249       6249 
+    fsm219     fsm225     fsm228     fsm239     fsm248     fsm383     fsm385 
+      6249       6249       6249       6265       6292       6498       6498 
+    fsm408     fsm416     fsm271     fsm274     fsm278     fsm280     fsm281 
+      6498       6511       6523       6523       6523       6523       6523 
+    fsm283     fsm284     fsm286     fsm287     fsm289     fsm292     fsm294 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm295     fsm296     fsm297     fsm298     fsm299     fsm300     fsm301 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm302     fsm303     fsm306     fsm310     fsm311     fsm312     fsm313 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm320     fsm321     fsm323     fsm325     fsm329     fsm330     fsm331 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm332     fsm333     fsm334     fsm335     fsm336     fsm339     fsm340 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm348     fsm349     fsm350     fsm354     fsm356     fsm360     fsm366 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm367     fsm369     fsm387     fsm389     fsm392     fsm395     fsm397 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm414     fsm418     fsm420     fsm421     fsm422     fsm423     fsm424 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm425     fsm428     fsm429     fsm430     fsm431     fsm432     fsm433 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm434     fsm435     fsm436     fsm437     fsm440     fsm441     fsm444 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm445     fsm447     fsm448     fsm450     fsm452     fsm453     fsm454 
+      6523       6523       6523       6523       6523       6523       6523 
+    fsm455     fsm478     fsm305     fsm470     fsm351     fsm386     fsm388 
+      6523       6523       6525       6525       6531       6537       6537 
+    fsm346     fsm317     fsm353     fsm401     fsm405     fsm465     fsm469 
+      6555       6562       8697       8697       8697       8697       8697 
+    fsm291     fsm307     fsm308     fsm315     fsm326     fsm342     fsm343 
+      8699       8699       8699       8699       8699       8699       8699 
+    fsm347     fsm357     fsm359     fsm363     fsm364     fsm393     fsm396 
+      8699       8699       8699       8699       8699       8699       8699 
+    fsm417     fsm426     fsm427     fsm438     fsm439     fsm443     fsm446 
+      8699       8699       8699       8699       8699       8699       8699 
+    fsm457     fsm458     fsm459     fsm460     fsm371     fsm415     fsm472 
+      8699       8699       8699       8699       8705       8705       8705 
+    fsm475     fsm477     fsm412     fsm293     fsm399     fsm461     fsm361 
+      8705       8705       8707       8713       8713       8713       8717 
+    fsm318     fsm355     fsm404     fsm362     fsm277     fsm210     fsm220 
+      8721       8721       8721       8736       8781      10367      10374 
+    fsm328     fsm341     fsm365     fsm402     fsm413     fsm466     fsm468 
+     10871      10871      10871      10871      10871      10871      10871 
+    fsm473     fsm400     fsm462     fsm410     fsm479     fsm409     fsm463 
+     10871      10894      10894      13060      13525      15242      15242 
