@@ -4,11 +4,11 @@
 
 import os,csv,sys
 
-path = sys.argv[1] # path to the files containing fsm summaries
+path = sys.argv[1] # path to the files containing the fsm analyses
                    # the new file will be saved in the directory 'data' next to current directory
 
 # open the new file
-with open("../data/fsm-summary.csv", 'w') as write_file:
+with open("../data/merged-fsm.csv", 'w') as write_file:
     write_file.write("FSM, State, Transitions, Density\n")
 
     for folder, sub_folders, files in os.walk(path):

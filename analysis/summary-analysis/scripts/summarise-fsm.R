@@ -1,4 +1,4 @@
-pf <- read.csv('../data/fsm-summary.csv')
+pf <- read.csv('../data/merged-fsm.csv')
 library(plyr)
 
 # Gets the number of states per FSM and sorts them
@@ -12,8 +12,8 @@ transitions_out <- capture.output(transitions)
 states_out <- capture.output(states)
 
 # Outputs them in file
-cat("Transitions", transitions_out, file="../data/r-fsm-summary.txt", sep="\n", append=FALSE)
-cat("\nStates", states_out, file="../data/r-fsm-summary.txt", sep="\n", append=TRUE)
+cat("Transitions", transitions_out, file="../data/sorted-fsm-summary.txt", sep="\n", append=FALSE)
+cat("\nStates", states_out, file="../data/sorted-fsm-summary.txt", sep="\n", append=TRUE)
 
 #####################################################################################
 
@@ -32,4 +32,4 @@ print.data.frame(table)
 
 # Save table for output
 table_out <- capture.output(print.data.frame(table))
-cat(table_out, file="../data/table.txt", sep="\n")
+cat(table_out, file="../data/summarised-fsm.tsv", sep="\n")
