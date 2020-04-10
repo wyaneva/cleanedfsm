@@ -4,3 +4,6 @@ prefix_list/
 transition_pair_tests/
 transition_pairs/
 maxlengths/
+subjects/tests/
+subjects/num-tests/
+subjects/test-lengths/
