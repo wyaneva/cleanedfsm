@@ -29,7 +29,11 @@ fig, ax = plt.subplots()
 
 for folder, sub_folders, files in os.walk(path):
     for special_file in files:
+        if not special_file.endswith(".csv"):
+            continue
+
         file_path = os.path.join(folder, special_file)
+        print(file_path)
         df = pd.read_csv(file_path)
         testcases=(df['Testcases'].drop_duplicates().values.tolist())
         totalcpu = (df['Total CPU'].values.tolist())
@@ -72,12 +76,12 @@ for folder, sub_folders, files in os.walk(path):
         print(executiongpu[0],bmk)    
         total+=executiongpu[0]
         
-        handlestyle = next(handlestyles)
-        handle,=plt.plot(testcases,executiongpu,label=bmk,linestyle=handlestyle[0],marker=handlestyle[1],markersize=13)
-        handles.append(handle)
-        labels.append(bmk)
-        sortingpoints.append(executiongpu[0])
-
+        handlestyle = next(handlestyles, None)
+        if handlestyle is not None:
+            handle,=plt.plot(testcases,executiongpu,label=bmk,linestyle=handlestyle[0],marker=handlestyle[1],markersize=13)
+            handles.append(handle)
+            labels.append(bmk)
+            sortingpoints.append(executiongpu[0])
 
 print(total/12)
 
@@ -109,15 +113,15 @@ for y in yrange:
 ax.axhline(y=1, color='k', ls='dotted')
 
 # set labels
-if(option == "keysight"):
-    plt.xlabel('Number of tests (log base 2)',fontsize=40)
-else:
-    plt.ylabel('Speedup compared to 16-core CPU',fontsize=40)
-    plt.xlabel('Number of tests (log base 2)',fontsize=40)
+#if(option == "keysight"):
+#    plt.xlabel('Number of tests (log base 2)',fontsize=30)
+#else:
+plt.ylabel('Speedup compared to 16-core CPU',fontsize=30)
+plt.xlabel('Number of tests (log base 2)',fontsize=30)
 
 #sort the labels/handles by the sorting points
 sortingpoints, labels, handles = zip(*sorted(zip(sortingpoints, labels, handles), key=lambda t: t[0], reverse=True))
     #set the legend
-plt.legend(loc = 2, fontsize = 30, labels=labels, handles=handles,fancybox=True, framealpha=0.2)
+plt.legend(loc = 2, fontsize = 20, labels=labels, handles=handles,fancybox=True, framealpha=0.2)
 
 plt.show()
